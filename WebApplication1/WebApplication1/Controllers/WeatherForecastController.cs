@@ -18,8 +18,8 @@ namespace WebApplication1.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        [HttpGet("GetWeatherForecast")]
+        public IEnumerable<WeatherForecast> GetWeatherForecast()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
@@ -30,7 +30,7 @@ namespace WebApplication1.Controllers
             .ToArray();
         }
 
-        [HttpGet(Name = "TestJenkin")]
+        [HttpGet("TestJenkin")]
         public IEnumerable<WeatherForecast> TestJenkin()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -41,7 +41,7 @@ namespace WebApplication1.Controllers
             })
             .ToArray();
         }
-        [HttpGet(Name = "TestJenkin2")]
+        [HttpGet("TestJenkin2")]
         public IEnumerable<WeatherForecast> TestJenkin2()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
